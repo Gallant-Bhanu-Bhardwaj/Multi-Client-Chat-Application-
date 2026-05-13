@@ -1,18 +1,3 @@
-/*
- * ============================================================
- *  Multi-Client Chat Client  v2.0
- *  TCP/IP  |  POSIX Threads  |  Linux
- *
- *  New in v2:
- *    • Prompts for username on connect
- *    • Private messages shown in magenta
- * ============================================================
- *
- *  Build:  gcc -Wall -O2 -o client client.c -lpthread
- *  Run:    ./client [host] [port]
- *          ./client 127.0.0.1 9090
- * ============================================================
- */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,9 +35,7 @@ static void *recv_thread(void *arg);
 static void  sigint_handler(int sig);
 static void  clear_line(void);
 
-/* ═══════════════════════════════════════════════════════════
- *  main
- * ═══════════════════════════════════════════════════════════ */
+ /*  main */
 int main(int argc, char *argv[])
 {
     const char *host = (argc >= 2) ? argv[1] : DEFAULT_HOST;
@@ -79,7 +62,7 @@ int main(int argc, char *argv[])
 
     printf(BOLD GREEN
            "\n  ╔══════════════════════════════════════╗\n"
-           "  ║    Multi-Client Chat Client v2.0     ║\n"
+           "  ║    Multi-Client Chat Client     ║\n"
            "  ╚══════════════════════════════════════╝\n" RESET);
     printf(CYAN "  Connected to %s:%d\n\n" RESET, host, port);
 
@@ -118,9 +101,7 @@ int main(int argc, char *argv[])
     return EXIT_SUCCESS;
 }
 
-/* ═══════════════════════════════════════════════════════════
- *  recv_thread  –  prints all incoming text from server
- * ═══════════════════════════════════════════════════════════ */
+/* *  recv_thread  –  prints all incoming text from server */
 static void *recv_thread(void *arg)
 {
     (void)arg;
