@@ -183,7 +183,9 @@ git push origin feature/your-feature-name
 - Add a `/kick` command for server admin
 - Port the client to a simple GUI using `ncurses`
 
-Please follow the existing code style — C11, no external libraries beyond `pthreads`.## References
+Please follow the existing code style — C11, no external libraries beyond `pthreads`.
+
+## References
 
 - [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/?utm_source=chatgpt.com) — the gold standard reference for socket programming in C
 - [POSIX Threads Programming — LLNL](https://hpc-tutorials.llnl.gov/posix/?utm_source=chatgpt.com) — comprehensive pthreads documentation
